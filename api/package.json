@@ -2,7 +2,7 @@
   "name": "api",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
+ "scripts": {
     "dev": "nodemon index.js",
     "build": "prisma migrate deploy && prisma db seed",
     "test": "echo \"Error: no test specified\" && exit 1"
