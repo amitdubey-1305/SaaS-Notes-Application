@@ -5,22 +5,25 @@
       "src": "api/package.json",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["api/prisma/**"]
+        "includeFiles": ["prisma/**"]
       }
     },
     {
       "src": "web/package.json",
-      "use": "@vercel/static-build"
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "api/index.js"
+      "dest": "/api/index.js"
     },
     {
       "src": "/(.*)",
-      "dest": "web/$1"
+      "dest": "/web/dist/index.html"
     }
   ]
 }
