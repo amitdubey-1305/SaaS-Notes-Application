@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import apiClient from '../Api';
+import apiClient from '../api';
 import { jwtDecode } from 'jwt-decode'; // <-- Import the new library
 
 function Dashboard() {

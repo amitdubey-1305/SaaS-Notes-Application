@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import apiClient from '../Api';  // Should be '../api' (lowercase)
+import apiClient from '../api';  // Should be '../api' (lowercase)
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
