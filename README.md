@@ -9,7 +9,7 @@
 ## 🔑 Demo Login
 
 - **Email:** `admin@acme.test`
-- **Password:** `password`
+--   **Password:** `password`
 
 ---
 

@@ -15,7 +15,7 @@
 To explore the application, please use the following credentials for the "Acme" company:
 
 -   **Email:** `admin@acme.test`
--   **Password:** `padmin@acme.test`
+-   **Password:** `password`
 
 ---
 
