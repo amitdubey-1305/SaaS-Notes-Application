@@ -5,7 +5,7 @@
 
 ##  Live Demo 
 
-**You can test the live application here: 
+ 
 
 
 ---
@@ -15,7 +15,7 @@
 To explore the application, please use the following credentials for the "Acme" company:
 
 -   **Email:** `admin@acme.test`
--   **Password:** `password`
+-   **Password:** `padmin@acme.test`
 
 ---
 
