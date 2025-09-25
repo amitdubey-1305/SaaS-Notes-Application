@@ -23,7 +23,22 @@ app.use('/api/tenants', tenantRoutes); // <-- Use the new route
 app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
+// --- TEMPORARY DATABASE TEST ROUTE ---
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 
+app.get('/api/db-test', async (req, res) => {
+  try {
+    await prisma.$connect();
+    res.json({ status: 'ok', message: 'Successfully connected to the new Vercel database.' });
+  } catch (error) {
+    console.error('Database connection failed:', error);
+    res.status(500).json({ status: 'error', message: 'Failed to connect to the database.', error: error.message });
+  } finally {
+    await prisma.$disconnect();
+  }
+});
+// ------------------------------------
 // --- 5. Start the Server ---
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
