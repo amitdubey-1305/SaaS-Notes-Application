@@ -1,0 +1,151 @@
+/* --- Basic Setup & Background --- */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f4f7f9;
+  color: #333;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.heading{
+    text-underline-position: below;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+.cool{
+    color: #16a085;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-left: 5px solid yellowgreen;
+    padding-left: 10px;
+    background-color: #e8f6f3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease;
+}
+.dashboard{
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.para{
+    font-style: italic;
+    color: #7f8c8d;
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+h1, h2, h3 {
+  color: #1a202c;
+}
+
+/* --- Forms & Inputs --- */
+form {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Important for padding and width */
+  font-size: 16px;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* --- Buttons --- */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4a90e2; /* A nice blue */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #357abd; /* A darker blue for hover */
+}
+
+/* --- Notes List --- */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li strong {
+  font-size: 1.1em;
+}
+
+/* --- Specific Button Styles --- */
+li button {
+  background-color: #e53e3e; /* A red for delete buttons */
+}
+
+li button:hover {
+  background-color: #c53030; 
+}
+
+
+p[style*="color: red"] {
+    font-weight: bold;
+    margin-top: 10px;
+}

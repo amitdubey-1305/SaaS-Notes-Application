@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// YOU SHOULD ONLY HAVE ONE OF THESE DATASOURCE BLOCKS
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Tenant {
+  id    String @id @default(cuid())
+  name  String // "Acme" or "Globex"
+  slug  String @unique // "acme" or "globex"
+  plan  String @default("FREE") // "FREE" or "PRO"
+  users User[]
+  notes Note[]
+}
+
+model User {
+  id       String @id @default(cuid())
+  email    String @unique
+  password String // This will be a hashed password
+  role     String // "ADMIN" or "MEMBER"
+  tenantId String
+  tenant   Tenant @relation(fields: [tenantId], references: [id])
+  notes    Note[]
+
+  @@index([tenantId])
+}
+
+model Note {
+  id        String   @id @default(cuid())
+  title     String
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  authorId  String
+  author    User     @relation(fields: [authorId], references: [id])
+  tenantId  String
+  tenant    Tenant   @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+
+  @@index([tenantId])
+  @@index([authorId])
+}
