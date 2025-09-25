@@ -17,10 +17,9 @@
     {
       "src": "/api/(.*)",
       "dest": "api/index.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "web/index.html"
     }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
